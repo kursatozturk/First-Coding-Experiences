@@ -343,19 +343,3 @@ def heap_sort(Array, is_max = True):
         else:
             sorted.insert(0, heap.pop_max())
     return sorted
-
-
-
-if __name__ == '__main__':
-    A = [3, 4, 1, 2, 7, 8, 3, 0, 11, 12, 5, 9, 6]
-    B = [3, 4, 1, 2, 7, 8, 3, 3, 3, 3, 5, 9, 6] 
-    C = [345, 457, 112, 233, 757, 8, 10, 0, 11, 12, 5, 9, 22222222] 
-    D = [123, 222225, 344, 457, 112, 233, 757, 8, 10, 0, 11, 12, 5, 9, 6] 
-    print(A)
-    quick_sort(A, 0, len(A) - 1)
-    print(B)
-    print(counting_sort(B, len(A), (0, 12)))
-    print(C)
-    print(radix_sort(counting_sort, C, len(C), (0,9))) #paramaters required by sorting function must be added here
-    print(D)
-    print(heap_sort(D, False))
